@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="./assets/images/favicon.png" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>Code Quiz</title>
+</head>
+
+<body>
+  <!-- header for the high score link and timer -->
+  <header>
+    <a class="highScore" href="./scores.html">High Scores</a>
+    <div class="timer">Timer:
+      <span id="timer">60</span>
+    </div>
+  </header>
+
+  <!-- main of body to be updated with js -->
+  <main id="main">
+    <h1 id="quiz-heading">Coding Quiz Challenge</h1>
+    <div id="quiz-body">
+      Test your coding knowledge in a timed test! The timer in the upper right hand corner of the screen will start when
+      you click "Start Quiz". Try to answer as many questions as you can before the time ends.<br><br>For every wrong
+      answer, your time will be docked 10 seconds. For every right answer, you'll get an additional 3 seconds. If you
+      answer all the questions, your remaining time is your total score!
+    </div>
+    <button class="btn" id="start-quiz" type="button">Start Quiz</button>
+    <div class="result" id="result"></div>
+  </main>
+
+  <footer>
+    <div>&copy;Dave Toth</div>
+  </footer>
+
+  <script src="./assets/js/quiz.js"></script>
+</body>
+
+</html>
