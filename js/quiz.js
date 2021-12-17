@@ -272,7 +272,7 @@ var saveHighScore = function(event) {
             // save highScores array to local storage
             localStorage.setItem("scores", JSON.stringify(highScores));
             // redirect user to the high score page
-            location.replace("https://sirubu.github.io/code-quiz/scores.html");
+            location.replace("https://davetoth77.github.io/code-quiz/scores.html");
         }
     }
 };

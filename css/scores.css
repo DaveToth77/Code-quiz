@@ -1,0 +1,31 @@
+:root {
+    --primary: #6679d1;
+    --secondary: #212c49;
+    --tertiary: #464a53;
+}
+
+body {
+    height: auto;
+}
+
+main div {
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin: 15px 0;
+    border-bottom: var(--primary) solid 4px;
+    padding-bottom: 10px;
+}
+
+.score-info {
+    text-align: center;
+}
+
+.btn {
+    margin-bottom: 20px;
+}
