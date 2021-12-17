@@ -8,12 +8,8 @@
 
 A browser based application that allows users to test their HTML, CSS, and JavaScript knowledge with this timed coding quiz!
 
-#### Usage
+![Screen Shot 2021-12-17 at 7 27 53 AM](https://user-images.githubusercontent.com/85111342/146545328-b8a1d1c9-1377-4f1a-a950-db83bce57ecb.png)
 
-    npm run seed
-    npm start
-    browse to http://localhost:3000/
-    browse to http://localhost:3001/graphql/
 
 
 ## Questions
