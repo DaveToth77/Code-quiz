@@ -246,3 +246,55 @@ var endQuiz = function () {
   // append the entire form to the messageEl
   messageEl.appendChild(formEl);
 };
+
+// function for submit button
+var saveHighScore = function(event) {
+    // prevent default
+    event.preventDefault();
+    // only run if the submit button is being clicked
+    var targetEl = event.target;
+    if(targetEl.matches("#save-initials")) {
+        // get the initial entry form element
+        var formEl = document.querySelector(".user-initials");
+        var userInitials = formEl.value
+        // ensure initials have been entered
+        if(!userInitials) {
+            alert("Please enter your initials to submit your score... this does not seem to be optional.");
+            return false;
+        // save user input and score to localStorage
+        } else {
+            var highScoreObj = {
+                initials: userInitials,
+                score: timer
+            };
+            // send obj to highScores array
+            highScores.push(highScoreObj);
+            // save highScores array to local storage
+            localStorage.setItem("scores", JSON.stringify(highScores));
+            // redirect user to the high score page
+            location.replace("https://sirubu.github.io/code-quiz/scores.html");
+        }
+    }
+};
+
+// function to get and update high scores
+var loadScores = function() {
+    highScores = localStorage.getItem("scores");
+    // check if scores is null/falsy
+    if(!highScores) {
+        highScores = [];
+        return false;
+    }
+    // convert highScores from stringified format to an array of objects
+    highScores = JSON.parse(highScores);
+};
+
+// event listener for click of start button
+startBtn.addEventListener("click", startQuiz);
+// event listener for click of a guess button during quiz
+messageEl.addEventListener("click", guessHandler);
+// event listener for submit button
+mainEl.addEventListener("click", saveHighScore);
+
+// load any high scores from the localStorage
+loadScores();
