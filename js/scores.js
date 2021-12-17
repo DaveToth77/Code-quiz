@@ -37,7 +37,7 @@ var loadScores = function () {
 
 // function to return to index.html
 var goToIndex = function () {
-  location.replace("https://sirubu.github.io/code-quiz/");
+  location.replace("https://davetoth77.github.io/code-quiz/");
 };
 
 // function to clear the high scores stored in localStorage
